@@ -39,4 +39,14 @@ class LinkedList
   def head_s
     @head ? "Head: #{@head.value}" : 'Head: nil'
   end
+
+  def tail
+    if @head.nil?
+      'Tail: nil'
+    else
+      node = @head
+      node = node.next_node while node.next_node
+      "Tail: #{node.value}"
+    end
+  end
 end
