@@ -35,4 +35,8 @@ class LinkedList
     end
     "Size: #{count}"
   end
+
+  def head_s
+    @head ? "Head: #{@head.value}" : 'Head: nil'
+  end
 end
