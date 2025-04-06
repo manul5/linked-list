@@ -80,4 +80,17 @@ class LinkedList
     end
     'Deleted: nil'
   end
+
+  def contains?(value)
+    node = @head
+    bool = false
+    while node
+      if node.value == value
+        bool = true
+        break
+      end
+      node = node.next_node
+    end
+    bool
+  end
 end
