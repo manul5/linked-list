@@ -111,4 +111,15 @@ class LinkedList
     end
     index
   end
+
+  def to_s
+    node = @head
+    str = ''
+    while node
+      str += "( #{node.value} ) -> "
+      node = node.next_node
+    end
+    str << 'nil'
+    str
+  end
 end
