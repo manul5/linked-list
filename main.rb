@@ -16,3 +16,4 @@ puts list.head.next_node
 puts list.size
 puts list.head_s
 puts list.tail
+puts list.at(3)

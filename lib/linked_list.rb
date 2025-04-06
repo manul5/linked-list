@@ -49,4 +49,18 @@ class LinkedList
       "Tail: #{node.value}"
     end
   end
+
+  def at(index)
+    node = @head
+    value = nil
+    while node
+      if index.zero?
+        value = node.value
+        break
+      end
+      node = node.next_node
+      index -= 1
+    end
+    value ? "Value: #{value}" : 'Value: nil'
+  end
 end
