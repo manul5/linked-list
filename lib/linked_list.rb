@@ -93,4 +93,22 @@ class LinkedList
     end
     bool
   end
+
+  def find(value)
+    node = @head
+    index = nil
+    while node
+      if node.value == value
+        index = index.to_i if index.nil?
+        break
+      elsif node.next_node.nil?
+        index = nil
+        break
+      end
+      node = node.next_node
+      index = index.to_i if index.nil?
+      index += 1
+    end
+    index
+  end
 end
