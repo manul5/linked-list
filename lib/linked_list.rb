@@ -25,4 +25,14 @@ class LinkedList
     node.next_node = @head unless @head.nil?
     @head = node
   end
+
+  def size
+    count = 0
+    node = @head
+    while node
+      count += 1
+      node = node.next_node
+    end
+    "Size: #{count}"
+  end
 end
