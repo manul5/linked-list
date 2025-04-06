@@ -63,4 +63,21 @@ class LinkedList
     end
     value ? "Value: #{value}" : 'Value: nil'
   end
+  
+  def pop
+    node = @head
+    while node
+      if node.next_node.nil?
+        value = node.value
+        @head = nil
+        return "Deleted: #{value}"
+      elsif node.next_node.next_node.nil?
+        value = node.next_node.value
+        node.next_node = nil
+        return "Deleted: #{value}"
+      end
+      node = node.next_node
+    end
+    'Deleted: nil'
+  end
 end
