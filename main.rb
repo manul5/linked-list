@@ -20,3 +20,11 @@ puts list.head_s
 puts list.tail
 puts list.at(3)
 puts list
+list2 = LinkedList.new
+list2.append('dog')
+list2.append('cat')
+list2.append('parrot')
+list2.append('hamster')
+list2.append('snake')
+list2.append('turtle')
+puts list2
