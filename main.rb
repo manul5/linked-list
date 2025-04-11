@@ -29,3 +29,5 @@ list2.append('snake')
 list2.append('turtle')
 list2.insert_at('tralalero', 5)
 puts list2
+list2.remove_at(4)
+puts list2

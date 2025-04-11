@@ -127,7 +127,6 @@ class LinkedList
     node = @head
     index -= 1
     while node
-
       node = node.next_node
       index -= 1
       break if index.zero?
@@ -141,4 +140,15 @@ class LinkedList
       new_node.value = value
     end
   end 
+
+  def remove_at(index)
+    node = @head
+    while node
+      node = node.next_node
+      index -= 1
+      last_node = node if index == 1
+      break if index.zero?
+    end
+    last_node.next_node = node.next_node if last_node && node
+  end
 end
