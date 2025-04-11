@@ -122,4 +122,23 @@ class LinkedList
     str << 'nil'
     str
   end
+
+  def insert_at(value, index)
+    node = @head
+    index -= 1
+    while node
+
+      node = node.next_node
+      index -= 1
+      break if index.zero?
+    end
+    if index.positive?
+      nil
+    else
+      new_node = Node.new
+      new_node.next_node = node.next_node
+      node.next_node = new_node
+      new_node.value = value
+    end
+  end 
 end

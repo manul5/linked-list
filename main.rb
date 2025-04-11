@@ -27,4 +27,5 @@ list2.append('parrot')
 list2.append('hamster')
 list2.append('snake')
 list2.append('turtle')
+list2.insert_at('tralalero', 5)
 puts list2
